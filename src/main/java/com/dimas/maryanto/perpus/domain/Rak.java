@@ -1,9 +1,15 @@
 package com.dimas.maryanto.perpus.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "m_rak", schema = "master")
 public class Rak {
@@ -16,6 +22,6 @@ public class Rak {
     @Column(name = "kode_rak", nullable = false, unique = true, length = 10)
     private String kode;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 100)
     private String nama;
 }

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <title>Aplikasi Perpustakaan</title>
 </head>
 <body>
-${{message}}
+<!--/*@thymesVar id="message" type="com.dimas.maryanto.perpus.controller.AplikasiController"*/-->
+<div th:text="${message}"></div>
 </body>
 </html>
